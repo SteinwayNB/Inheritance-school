@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="From school">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Inheritance_ZG_B4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Inheritance_ZG_B4/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Family_Tree/FamilyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Family_Tree/FamilyTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +32,12 @@
     &quot;assignee&quot;: &quot;SteinwayNB&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/SteinwayNB/Inheritance-school&quot;,
-    &quot;accountId&quot;: &quot;6eed0f52-a569-4126-aeec-702fb2d6ff85&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SteinwayNB/Inheritance-school.git",
+    "accountId": "232499df-9759-4aaf-8435-54041523267e"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>

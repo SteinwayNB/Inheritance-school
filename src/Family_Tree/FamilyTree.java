@@ -1,8 +1,11 @@
 package Family_Tree;
 
+import java.util.Scanner;
+
 public class FamilyTree {
 
     public static void run(){
+        Scanner in = new Scanner(System.in);
         //generation 0
         Person person1 = new Person("Bobbie", "Mexico");
 
@@ -34,8 +37,16 @@ public class FamilyTree {
         person1.children.get(1).children.get(1).children.get(1).addChild(new Person("Max","Germany"));
 
         printFamily(person1);
+        System.out.println("test");
+        printFamily(person1.children.get(0).children.get(0));
         System.out.println();
-        countFamily(person1);
+        System.out.println(countFamily(person1));
+        System.out.println("People living in Canada:"+printCanadians(person1));
+        System.out.println("Enter the name of a family member: ");
+        String inperson = in.nextLine();
+        printFromHere(inperson, person1);
+
+
 
 
 
@@ -77,11 +88,56 @@ public class FamilyTree {
 
     }
 
-    public static int countFamily(Person pTemp){
-        int num = 0;
 
+    public static int countFamily(Person p) {
+        int num = 1;
+        if(p == null){
+            return 0;
+        }else{
+            for (int i = 0; i<p.children.size(); i++) {
+                num += countFamily(p.children.get(i));
+            }
+        }
         return num;
     }
+
+    public static String printCanadians(Person p){
+        String temps = "";
+        if(p == null){
+            return " ";
+        }else{
+            for (int i = 0; i < p.children.size(); i++) {
+                if(p.children.get(i).getCountry().equalsIgnoreCase("canada")){
+                    temps += " "+ p.children.get(i).getName() + printCanadians(p.children.get(i));
+                }else{
+                    temps += printCanadians(p.children.get(i));
+                }
+
+            }
+        }
+        return temps;
+    }
+
+    public static Person printFromHere(String inp, Person p){
+        if(inp.equalsIgnoreCase(p.getName())){
+            printFamily(p);
+        }else if(p == null){
+            return null;
+        }else{
+            for (int i = 0; i < p.children.size(); i++) {
+                if(p.children.get(i).getName().equalsIgnoreCase(inp)){
+                    printFamily(printFromHere(inp, p.children.get(i)));
+                }else{
+                    printFromHere(inp, p.children.get(i));
+                }
+
+            }
+        }
+        return p;
+    }
+
+
+
 
 
 }
